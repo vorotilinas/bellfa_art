@@ -44,7 +44,7 @@
 .header {
   box-sizing: border-box;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image/bgi.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../image/bgi.png);
   background-size: cover;
   background-position: center;
 }
@@ -137,15 +137,15 @@
 }
 
 .icon--phone {
-  background-image: url(image/icons/icon-phone-call.svg);
+  background-image: url(../image/icons/icon-phone-call.svg);
 }
 
 .icon--menu {
-  background-image: url(image/icons/icon-burger-menu.svg);
+  background-image: url(../image/icons/icon-burger-menu.svg);
 }
 
 .icon--close {
-  background-image: url(image/icons/icon-close.svg);
+  background-image: url(../image/icons/icon-close.svg);
 }
 
 .nav__list {
