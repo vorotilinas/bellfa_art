@@ -1,0 +1,352 @@
+@charset "UTF-8";
+.container {
+  padding-inline: 20px;
+}
+@media (min-width: 576px) {
+  .container {
+    padding-inline: 72px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1020px;
+    margin-inline: auto;
+    padding-inline: 120px;
+  }
+}
+
+.page {
+  scroll-behavior: smooth;
+}
+.page__body {
+  margin: 0;
+  min-height: 320px;
+}
+.page__menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+.page__menu:target {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+.page:has(.page__menu:target) {
+  overflow: hidden;
+}
+
+.header {
+  box-sizing: border-box;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../image/bgi.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.header__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 100%;
+  background-color: #FF4411;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  text-decoration: none;
+  color: #f5f5f5;
+  text-transform: uppercase;
+}
+
+.header__content {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__title {
+  color: #f5f5f5;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 100px;
+}
+
+.header__subtitle {
+  color: #f5f5f5;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.top-bar {
+  padding: 10px;
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+}
+
+.top-bar__logo-link {
+  color: #f5f5f5;
+  margin: 0;
+  text-decoration: none;
+}
+
+.top-bar__logo-text {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+}
+
+.top-bar__icons {
+  display: flex;
+  gap: 24px;
+}
+
+.menu {
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #FF4411;
+  overflow: auto;
+}
+
+.menu__top {
+  margin-bottom: 56px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.menu__nav {
+  margin-bottom: 40px;
+}
+
+.icon {
+  display: block;
+  height: 24px;
+  width: 24px;
+}
+
+.icon--phone {
+  background-image: url(../image/icons/icon-phone-call.svg);
+}
+
+.icon--menu {
+  background-image: url(../image/icons/icon-burger-menu.svg);
+}
+
+.icon--close {
+  background-image: url(../image/icons/icon-close.svg);
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.nav__link {
+  display: block; /* Изменить на блочный элемент */
+  width: 100%; /* Занимает всю ширину родителя */
+  padding: 16px 40px; /* Отступы сверху и снизу, а также слева */
+  position: relative;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 34px;
+  color: white;
+  text-decoration: none;
+}
+
+.section__title {
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  color: #FF4411;
+  text-align: center;
+  margin: 0;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about__foto {
+  margin-bottom: 30px;
+  width: 150px; /* Ширина круга */
+  height: 150px; /* Высота круга */
+  overflow: hidden; /* Скрыть часть изображения, выходящую за пределы круга */
+  border-radius: 50%; /* Сделать круг */
+  display: flex; /* Центрируем изображение внутри круга */
+  align-items: center; /* Вертикальное центрирование */
+  justify-content: center; /* Горизонтальное центрирование */
+}
+
+.about__img {
+  width: 100%; /* Ширина изображения будет равна ширине контейнера */
+  height: auto; /* Высота изображения будет пропорциональной */
+}
+
+.about__text {
+  font-size: 18px;
+}
+
+.main {
+  padding: 40px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.quote {
+  background-color: #FF4411;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  padding: 60px 0 60px 20px; /* Добавляем отступы внутри секции */
+  box-sizing: border-box; /* Учитываем паддинг в ширине */
+}
+
+.quote__img {
+  width: 40%; /* Настраиваем ширину изображения */
+  float: right; /* Размещаем изображение справа */
+  margin-left: 20px; /* Отступ слева для пространства между текстом и картинкой */
+}
+
+.quote__text {
+  color: #f5f5f5;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.quote__author {
+  color: #f5f5f5;
+  font-size: 18px;
+}
+
+.categories__wrapper {
+  display: flex; /* Используем flexbox для выравнивания элементов */
+  flex-direction: column; /* Устанавливаем вертикальное направление */
+  gap: 15px; /* Устанавливаем расстояние между картинками */
+}
+
+.category__link {
+  position: relative; /* Устанавливаем позицию для абсолютного позиционирования дочерних элементов */
+  overflow: hidden; /* Скрыть части изображения, выходящие за пределы блока */
+  display: flex; /* Используем flexbox для выравнивания элементов */
+  flex-direction: column; /* Устанавливаем вертикальное направление */
+  align-items: center; /* Центрируем элементы по горизонтали */
+  height: 200px; /* Задаем высоту равной высоте изображения */
+}
+
+.category__photo {
+  width: 100%;
+  height: 100%; /* Задаем высоту равной высоте родителя */
+  object-fit: cover; /* Обрезает изображение, сохраняя пропорции */
+  filter: brightness(0.7); /* Затемняем изображение */
+  border-radius: 15px; /* Закругляем края изображения */
+}
+
+.category__title {
+  position: absolute;
+  top: 40%; /* Выравниваем по центру вертикально */
+  left: 50%; /* Выравниваем по центру горизонтально */
+  transform: translate(-50%, -50%); /* Центрируем текст */
+  color: white; /* Цвет текста */
+  font-size: 32px; /* Размер шрифта */
+  text-align: center; /* Центрируем текст */
+  z-index: 1; /* Убедитесь, что текст поверх изображения */
+}
+
+.category__button {
+  margin-top: 10px; /* Добавляем отступ сверху для кнопки */
+  padding: 10px 20px; /* Отступы внутри кнопки */
+  border: none; /* Убираем рамку */
+  border-radius: 20px; /* Скругляем углы */
+  background-color: #FF4411; /* Оранжевый фон */
+  color: white; /* Цвет текста на кнопке */
+  font-size: 16px; /* Размер шрифта */
+  cursor: pointer; /* Указатель курсора при наведении */
+  transition: background-color 0.3s; /* Плавный переход для изменения цвета */
+  z-index: 2; /* Убедитесь, что кнопка поверх изображения */
+  position: absolute; /* Устанавливаем абсолютное позиционирование для кнопки */
+  top: 60%; /* Устанавливаем положение кнопки ниже заголовка */
+  left: 50%; /* Центрируем кнопку по горизонтали */
+  transform: translate(-50%, -50%); /* Центрируем кнопку */
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #262526; /* Цвет заливки */
+  padding: 20px; /* Отступы внутри футера */
+  text-align: center; /* Центрируем текст */
+}
+
+.footer__title {
+  color: #FF4411; /* Цвет заголовка */
+  margin: 0; /* Убираем отступы */
+}
+
+.footer__text {
+  color: white; /* Цвет текста */
+  font-size: 18px;
+  padding-bottom: 40px;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer__link {
+  text-decoration: none; /* Убираем подчеркивание */
+  transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.footer__link:hover {
+  color: white; /* Цвет ссылки при наведении */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 44px;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  margin: 0;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=main.css.map */
