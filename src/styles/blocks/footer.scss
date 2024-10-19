@@ -1,0 +1,33 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #262526; /* Цвет заливки */
+    padding: 20px; /* Отступы внутри футера */
+    text-align: center; /* Центрируем текст */
+}
+
+.footer__title {
+    color: #FF4411; /* Цвет заголовка */
+    margin: 0; /* Убираем отступы */
+}
+
+.footer__text {
+    color: white; /* Цвет текста */
+    font-size: 18px;
+    padding-bottom: 40px;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer__link {
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.footer__link:hover {
+    color: white; /* Цвет ссылки при наведении */
+}

@@ -1,0 +1,20 @@
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.nav__link {
+    display: block; /* Изменить на блочный элемент */
+    width: 100%; /* Занимает всю ширину родителя */
+    padding: 16px 40px; /* Отступы сверху и снизу, а также слева */
+    position: relative;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 34px;
+    color: white;
+    text-decoration: none;
+}

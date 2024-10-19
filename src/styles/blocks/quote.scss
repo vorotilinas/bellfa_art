@@ -1,0 +1,28 @@
+.quote {
+    background-color: #FF4411;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    padding: 60px 0 60px 20px; /* Добавляем отступы внутри секции */
+    box-sizing: border-box; /* Учитываем паддинг в ширине */
+}
+
+.quote__img {
+    width: 40%; /* Настраиваем ширину изображения */
+    float: right; /* Размещаем изображение справа */
+    margin-left: 20px; /* Отступ слева для пространства между текстом и картинкой */
+}
+
+.quote__text {
+    color: #f5f5f5;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.quote__author {
+    color: #f5f5f5;
+    font-size: 18px;
+}
